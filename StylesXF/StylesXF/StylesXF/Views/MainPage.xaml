@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:StylesXF"
+             x:Class="StylesXF.MainPage" Title="First page">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="labelRedStyle" TargetType="Label">
+                <Setter Property="HorizontalOptions"
+                        Value="Center" />
+                <Setter Property="VerticalOptions"
+                        Value="CenterAndExpand" />
+                <Setter Property="FontSize" Value="Large" />
+                <Setter Property="TextColor" Value="Red" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout Orientation="Vertical" HorizontalOptions="Center">
+        <Button x:Name="btn_global" Text="Global style button" Style="{StaticResource buttonStyle}" />
+        <Label Text="Explicit style" Style="{StaticResource labelRedStyle}" />
+    </StackLayout>
+
+</ContentPage>

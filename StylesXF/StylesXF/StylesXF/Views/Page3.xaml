@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StylesXF.Views.Page3" Title="Last page">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="baseStyle" TargetType="View">
+                <Setter Property="HorizontalOptions"
+                        Value="Center" />
+                <Setter Property="HeightRequest"
+                        Value="30" />
+                <Setter Property="WidthRequest"
+                        Value="200" />
+                <Setter Property="HorizontalOptions"
+                        Value="Center" />
+                <Setter Property="VerticalOptions"
+                        Value="CenterAndExpand" />
+            </Style>
+            <Style x:Key="blueSearchBarStyle" TargetType="SearchBar" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="TextColor"
+                        Value="Blue" />
+            </Style>
+            <Style x:Key="greenSearchBarStyle" TargetType="SearchBar" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="TextColor"
+                        Value="Green" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Padding="0,20,0,0">
+            <SearchBar x:Name="search_bar" Placeholder="These SearchBar controls"
+                       Style="{DynamicResource searchBarStyle}" />
+            <Button x:Name="btn_global" Text="Global style button" Style="{StaticResource buttonStyle}" />
+            <Button x:Name="btn_test" Text="Click !!" Style="{StaticResource buttonStyle}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

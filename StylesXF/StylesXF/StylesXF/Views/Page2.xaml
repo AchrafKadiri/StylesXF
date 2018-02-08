@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StylesXF.Views.Page2" Title="Third page">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="baseStyle" TargetType="View">
+                <Setter Property="HorizontalOptions"
+                        Value="Center" />
+                <Setter Property="VerticalOptions"
+                        Value="CenterAndExpand" />
+            </Style>
+            <Style x:Key="labelStyle" TargetType="Label"
+                   BasedOn="{StaticResource baseStyle}">
+                <Setter Property="TextColor" Value="Teal" />
+                <Setter Property="Text"
+                        Value="Inherit style" />
+            </Style>
+            <Style x:Key="editorStyle" TargetType="Editor"
+                   BasedOn="{StaticResource baseStyle}">
+                <Setter Property="IsEnabled" Value="False" />
+                <Setter Property="BackgroundColor" Value="Red" />
+                <Setter Property="Text"
+                        Value="Inherit style" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout Orientation="Vertical" HorizontalOptions="Center">
+        <Editor Style="{StaticResource editorStyle}"/>
+        <Label Style="{StaticResource labelStyle}"/>
+        <Button x:Name="btn_global" Text="Global style button" Style="{StaticResource buttonStyle}" />
+    </StackLayout>
+</ContentPage>
