@@ -17,20 +17,17 @@
                         Value="CenterAndExpand" />
             </Style>
             <Style x:Key="blueSearchBarStyle" TargetType="SearchBar" BasedOn="{StaticResource baseStyle}">
-                <Setter Property="TextColor"
-                        Value="Blue" />
+                <Setter Property="TextColor" Value="Blue" />
             </Style>
             <Style x:Key="greenSearchBarStyle" TargetType="SearchBar" BasedOn="{StaticResource baseStyle}">
-                <Setter Property="TextColor"
-                        Value="Green" />
+                <Setter Property="TextColor" Value="Green" />
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout Padding="0,20,0,0">
-            <SearchBar x:Name="search_bar" Placeholder="These SearchBar controls"
-                       Style="{DynamicResource searchBarStyle}" />
-            <Button x:Name="btn_global" Text="Global style button" Style="{StaticResource buttonStyle}" />
+            <SearchBar x:Name="search_bar" Placeholder="These SearchBar controls" Style="{DynamicResource searchBarStyle}" />
+            <Button x:Name="btn_global" Text="Global style button"  />
             <Button x:Name="btn_test" Text="Click !!" Style="{StaticResource buttonStyle}" />
         </StackLayout>
     </ContentPage.Content>

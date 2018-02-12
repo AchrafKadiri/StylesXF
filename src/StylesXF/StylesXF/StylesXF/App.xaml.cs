@@ -11,12 +11,21 @@ namespace StylesXF
 	{
 		public App ()
 		{
+            //Resources = new ResourceDictionary();
+
+            //SetColors(Resources);
+
 			InitializeComponent();
 
 			MainPage = new NavigationPage(new MainPage());
 		}
 
-		protected override void OnStart ()
+        private void SetColors(ResourceDictionary resources)
+        {
+            //resources.
+        }
+
+        protected override void OnStart ()
 		{
 			// Handle when your app starts
 		}
